@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Weather Dashboard</title>
+    <link rel="stylesheet" href="dashc.css"> <!-- Link to CSS file -->
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div id="weather-dashboard">
+        <h2>Interactive Weather Dashboard</h2>
+        <label for="city">Enter City: </label>
+        <input type="text" id="city" placeholder="e.g., New York">
+        <button id="get-weather-btn">Get Weather</button>
+        <button id="refresh-btn">Refresh</button>
+        <a href=""></a><button id="warning-btn">Weather Warnings</button>
+        <div id="weather-info">
+            <p id="location"></p>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+            <p id="tide-height"></p>
+        </div>
+        <canvas id="weather-chart" width="400" height="200"></canvas> <!-- Canvas for graph -->
+        <div id="warning-section">
+            <h3>Weather Warnings</h3>
+            <p id="warnings">No warnings currently.</p>
+        </div>
+        <div id="erosion-prediction">
+            <h3>Coastal Erosion Prediction</h3>
+            <p id="erosion-warning">No prediction available.</p>
+        </div>
+        <!-- Map container -->
+        <div id="map"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <script src="dashj.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

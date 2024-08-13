@@ -1,0 +1,170 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light blue background */
+    color: #004d40; /* Dark teal text color */
+    margin: 0;
+    padding: 0;
+}
+
+#weather-dashboard {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff; /* White background for dashboard */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #00796b; /* Teal heading color */
+    font-size: 2.5em; /* Larger font size for the main title */
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #00796b; /* Teal label color */
+    font-size: 1.1em; /* Slightly larger font size for labels */
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #00796b; /* Teal border */
+    border-radius: 4px;
+    font-size: 1em; /* Standard font size for input */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00796b; /* Teal button background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1em; /* Standard font size for buttons */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004d40; /* Dark teal button background on hover */
+}
+
+#weather-info {
+    margin-top: 20px;
+    font-size: 1.1em; /* Slightly larger font size for weather info */
+    line-height: 1.6; /* Improve readability with line height */
+}
+
+#weather-chart {
+    margin-top: 20px;
+}
+
+#warning-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #b2dfdb; /* Light teal background for warnings */
+    border-radius: 4px;
+    color: #004d40; /* Dark teal text color */
+    font-size: 1.1em; /* Slightly larger font size for warnings */
+    line-height: 1.6; /* Improve readability with line height */
+}
+
+#map {
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #weather-dashboard {
+        padding: 10px;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #weather-info, #warning-section {
+        font-size: 1em;
+    }
+
+    #weather-chart {
+        width: 100%;
+        height: auto;
+    }
+
+    #map {
+        height: 300px;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#weather-dashboard {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0277bd;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #0277bd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #0277bd;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #01579b;
+}
+
+#weather-info p, #warnings, #erosion-warning {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#map {
+    height: 400px;
+    margin: 20px 0;
+}
+
+#weather-chart {
+    margin: 20px 0;
+}
+
+#warning-section, #erosion-prediction {
+    padding: 15px;
+    background-color: #e3f2fd;
+    border-radius: 4px;
+    border: 1px solid #0288d1;
+}
+
+#warning-section h3, #erosion-prediction h3 {
+    color: #01579b;
+}
+

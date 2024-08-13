@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('night6.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 500px; /* Increased height for additional input fields */
+    background: transparent; /* Semi-transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Added padding for better spacing */
+    color: #fff;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff; /* Darker color for better readability */
+    text-align: center;
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.inputbox {
+    color: #fff;
+    position: relative;
+    margin: 20px 0;
+    width: 100%; /* Adjusted width to fit within the form box */
+    border-bottom: 2px solid #fff; /* Darker border color */
+}
+
+.inputbox label {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+    color: #ffF; /* Color change on focus */
+    font-size: 0.75em;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff; /* Blue color for the button */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #000; /* White text color */
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+button:hover {
+    background: blue;
+    color: whitesmoke; /* Darker blue on hover */
+}
+
+.register {
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: center;
+    margin-top: 20px; /* Adjusted margin for spacing */
+}
+
+.register p a {
+    text-decoration: none;
+    color: #007BFF; /* Blue color for the link */
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+.forget {
+    margin: -15px 0 15px;
+    font-size: 0.9em;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forget label input {
+    margin-right: 3px;
+}
+
+.forget label a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.forget label a:hover {
+    text-decoration: underline;
+}

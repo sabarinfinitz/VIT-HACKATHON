@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="register.css">
+  <title>Register</title>
+</head>
+<body>
+    <!-- Alert message section -->
+    <div id="alert" style="display:none; background-color: #f44336; color: white; padding: 15px; text-align: center;">
+        <span id="alert-message">Alert! The sea level has risen. Be safe!</span>
+        <button onclick="closeAlert()" style="margin-left: 15px;">Close</button>
+    </div>
+
+    <!-- Existing Registration Form -->
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form id="register-form">
+                    <h2>Register</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" id="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" id="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="confirm-password" required>
+                        <label>Confirm Password</label>
+                    </div>
+
+                    <!-- Region selection -->
+                    <label for="region">Select Your Region:</label>
+                    <select id="region" name="region" required>
+                        <option value="coastal_north">Coastal North</option>
+                        <option value="coastal_south">Coastal South</option>
+                        <option value="inland">Inland</option>
+                    </select>
+
+                    <!-- Alert opt-in -->
+                    <input type="checkbox" id="alertOptIn" name="alertOptIn" checked>
+                    <label for="alertOptIn">Receive Flood Alerts</label>
+
+                    <button type="submit">Register</button>
+                    <div class="register">
+                        <p>Already have an account? <a href="login.html">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="register.js"></script>
+    <script>
+        function displayAlert(message) {
+            document.getElementById("alert-message").innerText = message;
+            document.getElementById("alert").style.display = "block";
+        }
+
+        function closeAlert() {
+            document.getElementById("alert").style.display = "none";
+        }
+
+        // Example: You can trigger an alert after a registration attempt or periodically check for new alerts
+        setInterval(function() {
+            fetch('/get-latest-alert')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.alert) {
+                        displayAlert(data.alert);
+                    }
+                });
+        }, 30000);
+    </script>
+</body>
+</html>
